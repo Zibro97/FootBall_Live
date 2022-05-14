@@ -7,4 +7,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "FootBall_Live"
-include ':app'
+include ':app','data','domain','presentation'
