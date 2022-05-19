@@ -5,14 +5,15 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 apply from : '../version.gradle'
+apply from : '../common.gradle'
 
 android {
-    compileSdk 32
+    compileSdk 31
 
     defaultConfig {
         applicationId "com.zibro.football_live"
         minSdk 23
-        targetSdk 32
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -39,7 +40,6 @@ android {
 }
 
 dependencies {
-
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.1'
     implementation 'com.google.android.material:material:1.5.0'
@@ -51,9 +51,4 @@ dependencies {
     implementation project("$modularization.presentation")
     implementation project("$modularization.domain")
     implementation project("$modularization.data")
-
-    implementation "$libraries.hilt"
-    kapt "$libraries.hiltCompiler"
-    implementation "$libraries.timber"
-
 }

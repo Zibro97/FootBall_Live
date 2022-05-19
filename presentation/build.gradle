@@ -4,6 +4,8 @@ plugins {
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
 }
+apply from: '../version.gradle'
+apply from: '../common.gradle'
 
 android {
     buildFeatures{
