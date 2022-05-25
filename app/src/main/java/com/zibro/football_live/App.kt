@@ -6,9 +6,10 @@ import com.zibro.presentation.util.CustomTimberTree
 import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
+@HiltAndroidApp
 class App : Application(){
     companion object{
-        lateinit var instance : App
+        var instance : App? = null
     }
 
     override fun onCreate() {
@@ -17,5 +18,10 @@ class App : Application(){
         if(BuildConfig.DEBUG){
             Timber.plant(CustomTimberTree())
         }
+    }
+
+    override fun onTerminate() {
+        super.onTerminate()
+        instance = null
     }
 }

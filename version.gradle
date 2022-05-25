@@ -28,7 +28,18 @@ ext {
 
             //hilt
             hilt : "2.38.1",
-            hiltCompiler : "2.38.1",
+
+            //mockito
+            mockito: "3.4.0",
+
+            //jUnit
+            jUnit : "1.1.2",
+
+            //espresso
+            espresso: "3.3.0",
+
+            //coreTesting
+            coreTestring: "1.1.1",
 
             //Timber
             timber :  "5.0.1",
@@ -66,7 +77,7 @@ ext {
 
             //hilt
             hilt : "com.google.dagger:hilt-android:$versions.hilt",
-            hiltCompiler : "com.google.dagger:hilt-android-compiler:$versions.hiltCompiler",
+            hiltCompiler : "com.google.dagger:hilt-android-compiler:$versions.hilt",
 
             //Timber
             timber :  "com.jakewharton.timber:timber:$versions.timber",
@@ -75,6 +86,9 @@ ext {
             lottie : "com.airbnb.android:lottie:$versions.lottie"
     ]
     testing = [
-
+            mockito : "org.mockito:mockito-inline:$versions.mockito",
+            coreTestring : "android.arch.core:core-testing:$versions.coreTesting",
+            jUnit : "androidx.test.ext:junit:$versions.jUnit",
+            espresso : "androidx.test.espresso:espresso-core:$versions.espresso"
     ]
 }
