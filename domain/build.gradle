@@ -1,7 +1,6 @@
-apply plugin : 'com.android.library'
+apply plugin: 'kotlin'
 apply plugin : 'kotlin-kapt'
 apply from: '../version.gradle'
-apply from: '../common.gradle'
 
 dependencies {
 
