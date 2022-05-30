@@ -1,4 +1,12 @@
 <resources>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="menu_title_matches">경기</string>
+    <string name="menu_title_news">뉴스</string>
+    <string name="menu_title_leagues">리그</string>
+    <string name="menu_title_favorites">팔로잉</string>
+    <string name="menu_title_menu">더보기</string>
+    <string name="join_text_login">이미 가입하셨나요? 로그인</string>
+    <string name="join_button_init">빠른 설정</string>
+    <string name="background_image_view_description">background_image_view</string>
 </resources>

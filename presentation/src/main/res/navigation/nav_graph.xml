@@ -3,14 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment"
+    app:startDestination="@id/matches"
     >
 
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.zibro.presentation.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login"
+        android:id="@+id/matches"
+        android:name="com.zibro.presentation.ui.matches.MatchesFragment"
+        android:label="FOTMOB"
+        tools:layout="@layout/fragment_matches"
+        />
+
+    <fragment
+        android:id="@+id/news"
+        android:name="com.zibro.presentation.ui.news.NewsFragment"
+        android:label="뉴스"
+        tools:layout="@layout/fragment_news"
+        />
+    <fragment
+        android:id="@+id/leagues"
+        android:name="com.zibro.presentation.ui.leagues.LeaguesFragment"
+        android:label="리그"
+        tools:layout="@layout/fragment_leagues"
+        />
+    <fragment
+        android:id="@+id/favorites"
+        android:name="com.zibro.presentation.ui.favorites.FavoritesFragment"
+        android:label="팔로잉"
+        tools:layout="@layout/fragment_favorites"
+        />
+    <fragment
+        android:id="@+id/menu"
+        android:name="com.zibro.presentation.ui.menu.MenuFragment"
+        android:label="더보기"
+        tools:layout="@layout/fragment_menu"
         />
 
 </navigation>
