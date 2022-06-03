@@ -7,17 +7,22 @@ plugins {
 apply from : '../version.gradle'
 apply from : '../common.gradle'
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
 android {
     compileSdk 31
 
     defaultConfig {
         applicationId "com.zibro.football_live"
         minSdk 23
-        targetSdk 31
+        targetSdk 31F
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //api-sports key
+        buildConfigField "String","API_SPORTS_KEY",properties['api_key']
     }
 
     buildTypes {
