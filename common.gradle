@@ -36,4 +36,8 @@ dependencies {
     kapt "$libraries.hiltCompiler"
     //timber
     implementation "$libraries.timber"
+    //Retrofit
+    implementation "$libraries.retrofit"
+    implementation "$libraries.retrofitGson"
+    implementation "$libraries.okhttp3Logging"
 }

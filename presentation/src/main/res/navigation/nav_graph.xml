@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/menu"
         android:name="com.zibro.presentation.ui.menu.MenuFragment"
-        android:label="더보기"
+        android:label="더 보기"
         tools:layout="@layout/fragment_menu"
         />
 

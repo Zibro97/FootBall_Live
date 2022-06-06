@@ -4,5 +4,5 @@ apply from: '../version.gradle'
 
 dependencies {
 
-
+    implementation "$libraries.retrofitGson"
 }
