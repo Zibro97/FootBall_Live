@@ -40,4 +40,6 @@ dependencies {
     implementation "$libraries.retrofit"
     implementation "$libraries.retrofitGson"
     implementation "$libraries.okhttp3Logging"
+    //coroutines
+    implementation "$libraries.coroutines"
 }

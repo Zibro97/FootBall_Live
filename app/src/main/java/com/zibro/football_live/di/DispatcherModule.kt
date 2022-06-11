@@ -1,5 +1,8 @@
 package com.zibro.football_live.di
 
+import com.zibro.data.util.DefaultDispatcher
+import com.zibro.data.util.IODispatcher
+import com.zibro.data.util.MainDispatcher
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

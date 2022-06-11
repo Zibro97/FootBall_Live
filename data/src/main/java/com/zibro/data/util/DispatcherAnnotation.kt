@@ -1,4 +1,4 @@
-package com.zibro.football_live.di
+package com.zibro.data.util
 
 import javax.inject.Qualifier
 
