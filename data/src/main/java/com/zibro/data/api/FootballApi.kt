@@ -16,7 +16,7 @@ import retrofit2.http.Query
  * */
 interface FootballApi {
     //test api Request
-    @GET("/")
+    @GET("/status")
     suspend fun status():StatusInfo
 
     //국가 검색

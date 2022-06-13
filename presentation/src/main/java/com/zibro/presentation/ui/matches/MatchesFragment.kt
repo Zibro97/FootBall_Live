@@ -16,5 +16,6 @@ class MatchesFragment : BaseFragment<FragmentMatchesBinding>(R.layout.fragment_m
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.viewModelTest = viewModel
+        viewModel.getStatus()
     }
 }
