@@ -7,9 +7,14 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
+import kotlinx.coroutines.Job
 
-abstract class BaseFragment<DB:ViewDataBinding>(private val layoutId:Int) : Fragment() {
+abstract class BaseFragment<DB:ViewDataBinding,VM : BaseViewModel>(private val layoutId:Int) : Fragment() {
     protected lateinit var binding : DB
+
+    abstract val viewModel : VM
+
+    private lateinit var fetchJob : Job
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,9 +30,21 @@ abstract class BaseFragment<DB:ViewDataBinding>(private val layoutId:Int) : Frag
         super.onViewCreated(view, savedInstanceState)
 
         initViews()
-        liveData()
+        observeData()
+    }
+
+    open fun initState(){
+        initViews()
+        fetchJob = viewModel.fetchData()
     }
 
     open fun initViews() {}
-    open fun liveData() {}
+    abstract fun observeData()
+
+    override fun onDestroy() {
+        if(fetchJob.isActive){
+            fetchJob.cancel()
+        }
+        super.onDestroy()
+    }
 }

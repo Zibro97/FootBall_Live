@@ -9,13 +9,13 @@ import com.zibro.presentation.databinding.FragmentMatchesBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MatchesFragment : BaseFragment<FragmentMatchesBinding>(R.layout.fragment_matches) {
-
-    private val viewModel : MatchesViewModel by viewModels()
+class MatchesFragment : BaseFragment<FragmentMatchesBinding,MatchesViewModel>(R.layout.fragment_matches) {
+    override val viewModel by viewModels<MatchesViewModel>()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.viewModelTest = viewModel
-        viewModel.getStatus()
     }
+
+    override fun observeData() = Unit
 }

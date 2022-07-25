@@ -4,14 +4,18 @@ ext {
             appName : "football_live"
     ]
     versions = [
+            //Default Library
+            androidxCoreKtx : "1.8.0",
+            androidxAppCompat : "1.4.2",
+            material : "1.6.1",
+            constraintLayout : "2.1.4",
+
             //retrofit
             retrofit : "2.9.0",
-            retrofitGson : "2.9.0",
             okhttp3Logging : "4.9.0",
 
             //Room
             room : "2.4.2",
-            roomKtx : "2.4.2",
 
             //navigation
             navigation : "2.4.2",
@@ -52,14 +56,20 @@ ext {
             data        : ":data",
     ]
     libraries = [
+            //Default Library
+            androidxCoreKtx : "androidx.core:core-ktx:$versions.androidxCoreKtx",
+            androidxAppCompat : "androidx.appcompat:appcompat:$versions.androidxAppCompat",
+            material : "com.google.android.material:material:$versions.material",
+            constraintLayout : "androidx.constraintlayout:constraintlayout:$versions.constraintLayout",
+
             //retrofit
             retrofit : "com.squareup.retrofit2:retrofit:$versions.retrofit",
-            retrofitGson : "com.squareup.retrofit2:converter-gson:$versions.retrofitGson",
+            retrofitGson : "com.squareup.retrofit2:converter-gson:$versions.retrofit",
             okhttp3Logging : "com.squareup.okhttp3:logging-interceptor:$versions.okhttp3Logging",
 
             //Room
             room : "androidx.room:room-runtime:$versions.room",
-            roomKtx : "androidx.room:room-ktx:$versions.roomKtx",
+            roomKtx : "androidx.room:room-ktx:$versions.room",
 
             //navigation
             navigation : "androidx.navigation:navigation-ui-ktx:$versions.navigation",
